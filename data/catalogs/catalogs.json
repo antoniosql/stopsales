@@ -1,0 +1,30 @@
+{
+  "hotels_by_alias": {
+    "iberostar waves mehari djerba": [
+      "HOTEL:MEHARI_DJERBA",
+      "Iberostar Waves Mehari Djerba"
+    ],
+    "barcelo tenerife": [
+      "HOTEL:BARCELO_TENERIFE",
+      "Barceló Tenerife"
+    ]
+  },
+  "rooms_by_alias": {
+    "all rooms": [
+      "ROOM:ALL",
+      "All rooms"
+    ],
+    "double pool view": [
+      "ROOM:DBL_POOL",
+      "Double Pool View"
+    ]
+  },
+  "markets_by_alias": {
+    "es": "MARKET:ES",
+    "spain": "MARKET:ES"
+  },
+  "operators_by_alias": {
+    "soltour": "OP:SOLTOUR",
+    "ttoo a+b": "OP:TTOO_AB"
+  }
+}

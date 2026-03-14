@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "pattern": {
+      "type": "string",
+      "enum": [
+        "body_structured",
+        "pdf_or_text_attachment",
+        "visual_or_calendar_attachment",
+        "multi_event_complex",
+        "unknown"
+      ]
+    },
+    "provider": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "language": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "has_attachments": {
+      "type": "boolean"
+    },
+    "needs_document_intelligence": {
+      "type": "boolean"
+    },
+    "needs_vision": {
+      "type": "boolean"
+    },
+    "rationale": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  },
+  "required": [
+    "pattern",
+    "has_attachments",
+    "needs_document_intelligence",
+    "needs_vision",
+    "confidence"
+  ]
+}
