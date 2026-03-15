@@ -27,9 +27,15 @@ Solución end-to-end para transformar correos de *Stop Sales / Open Sales* hotel
 cp .env.example .env.dev
 # edita .env.dev
 
+# Linux/macOS
 bash scripts/deploy/10_deploy_azure_resources.sh .env.dev
 bash scripts/deploy/20_deploy_foundry_project.sh .env.dev
 bash scripts/deploy/30_assign_roles.sh .env.dev
+
+# Windows (PowerShell)
+pwsh ./scripts/deploy/10_deploy_azure_resources.ps1 .env.dev
+pwsh ./scripts/deploy/20_deploy_foundry_project.ps1 .env.dev
+pwsh ./scripts/deploy/30_assign_roles.ps1 .env.dev
 ```
 
 ### 3.2 (Opcional) Crear agentes en Foundry vía SDK
@@ -39,7 +45,11 @@ python scripts/foundry/20_setup_agents.py --env .env.dev
 
 ### 3.3 Publicar Function App
 ```bash
+# Linux/macOS
 bash scripts/deploy/40_publish_functionapp.sh .env.dev
+
+# Windows (PowerShell)
+pwsh ./scripts/deploy/40_publish_functionapp.ps1 .env.dev
 ```
 
 ## 4) Smoke test local con muestras (.msg)
